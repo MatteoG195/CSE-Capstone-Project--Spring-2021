@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MatteoG195/CSE-Capstone-Project--Spring-2021#readme",
   "dependencies": {
+    "gulp": "^4.0.2",
     "pixi.js": "^6.0.2"
   }
 }
