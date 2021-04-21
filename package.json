@@ -1,0 +1,22 @@
+{
+  "name": "cse-capstone-project--spring-2021",
+  "version": "1.0.0",
+  "description": "cse capstone spring 2021 project, see README for more information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatteoG195/CSE-Capstone-Project--Spring-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatteoG195/CSE-Capstone-Project--Spring-2021/issues"
+  },
+  "homepage": "https://github.com/MatteoG195/CSE-Capstone-Project--Spring-2021#readme",
+  "dependencies": {
+    "pixi.js": "^6.0.2"
+  }
+}
