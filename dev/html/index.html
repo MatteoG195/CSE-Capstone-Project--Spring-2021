@@ -3,34 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
 </head>
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-  <script>
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  <script type="text/javascript">
+    //basic test to see if webgl or canvas is being used
+    let type = "WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+      type = "canvas"
+    }
 
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
+    PIXI.utils.sayHello(type)
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    const cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+    //app is where all the magic happens,
+    //pixi uses the app object to store the whole graphics scene
+    let app = new PIXI.Application({
+      width:512,
+      height:512,
+      antialias:true,
+      transparent:false,
+      resolution:1.5
+    });
+    app.renderer.backgroundColor = 0x82B681;
 
-    camera.position.z = 5;
 
-    const animate = function () {
-      requestAnimationFrame( animate );
+    //I need to figure out what exactly this does, and why we
+    // need to call load(setup) in order to make it work.
+    //will check documentation soon.
+    PIXI.Loader.shared
+      .add("../img/frames/wizzard_m_idle_anim_f0.png")
+      .load(setup);
 
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+    //loads the image into a sprite object,
+    //which allows you to add it to the stage later.
+    function setup() {
+      let sprite = new PIXI.Sprite(
+        PIXI.Loader.shared.resources["../img/frames/wizzard_m_idle_anim_f0.png"].texture
+      );
 
-      renderer.render( scene, camera );
-    };
 
-    animate();
+      //the stage is where everything shows up,
+      //all sprites will show up here and be
+      // added to the stage
+      app.stage.addChild(sprite);
+    }
+
+
+
+    document.body.appendChild(app.view);
+
   </script>
 </body>
 </html>
