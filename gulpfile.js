@@ -6,6 +6,8 @@ const htmlCompressor = require(`gulp-htmlmin`);
 const htmlValidator = require(`gulp-html`);
 const jsLinter = require(`gulp-eslint`);
 const jsCompressor = require(`gulp-uglify`);
+const imageCompressor = require(`gulp-imagemin`);
+const cache = require(`gulp-cache`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 /*
@@ -83,6 +85,18 @@ let lintJS = () => {
 		.pipe(jsLinter.formatEach(`compact`, process.stderr));
 };
 
+let compressImages = () => {
+	return src(`dev/img/**/*`)
+		.pipe(cache(
+			imageCompressor({
+				optimizationLevel: 3, // For PNG files. Accepts 0 – 7; 3 is default.
+				progressive: true,    // For JPG files.
+				multipass: false,     // For SVG files. Set to true for compression.
+				interlaced: false     // For GIF files. Set to true for compression.
+			})
+		))
+		.pipe(dest(`prod/img`));
+};
 
 let dev = () => {
 	browserSync({
@@ -107,6 +121,8 @@ let dev = () => {
 	watch(`html/**/*.html`,
 		series(validateHTML)
 	).on(`change`, reload);
+
+	watch(`dev/img/**/*`).on(`change`, reload);
 };
 
 exports.validateHTML = validateHTML;
@@ -125,5 +141,6 @@ exports.dev = series(
 exports.build = series(
 	compressHTML,
 	transpileJSForProd,
-	transpileCSSForProd
+	transpileCSSForProd,
+	compressImages
 );
