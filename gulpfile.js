@@ -132,6 +132,7 @@ exports.transpileJSForProd = transpileJSForProd;
 exports.lintJS = lintJS;
 exports.lintCSS = lintCSS;
 exports.transpileCSSForProd = transpileCSSForProd;
+exports.compressImages = compressImages;
 exports.dev = series(
 	validateHTML,
 	lintJS,
