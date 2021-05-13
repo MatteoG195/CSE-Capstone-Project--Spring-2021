@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a440a6ff-2c01-4f53-b2a4-5f034a1e1aa4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rY6Z8n5dneSZUtM0uoG3IjetY0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.42" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\node_modules\eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\node_modules\stylelint" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\html" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\prod\img" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js\pixi.js" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gulp.js.validateHTML">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>build</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>dev</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="validateHTML" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>validateHTML</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gulp.js.build" />
+        <item itemvalue="Gulp.js.validateHTML" />
+        <item itemvalue="Gulp.js.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a440a6ff-2c01-4f53-b2a4-5f034a1e1aa4" name="Default Changelist" comment="" />
+      <created>1619140732955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619140732955</updated>
+      <workItem from="1619140735674" duration="10327000" />
+      <workItem from="1619152437012" duration="551000" />
+      <workItem from="1619375568179" duration="95000" />
+      <workItem from="1619375874579" duration="521000" />
+      <workItem from="1619383790078" duration="303000" />
+      <workItem from="1619398353814" duration="3025000" />
+      <workItem from="1619473994394" duration="5434000" />
+      <workItem from="1619484244342" duration="19000" />
+      <workItem from="1619486915396" duration="1111000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1660" y="824" width="1150" height="1052" key="#ESLint" timestamp="1619483955167">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state x="830" y="412" width="520" height="214" key="#ESLint/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619150588210" />
+    <state x="1660" y="824" width="1150" height="1052" key="#ESLint/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619483955167" />
+    <state x="1448" y="754" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619474096108">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state x="1448" y="754" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619474096108" />
+    <state x="1482" y="524" key="FileChooserDialogImpl" timestamp="1619483880204">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state x="1482" y="524" key="FileChooserDialogImpl/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619483880204" />
+    <state width="1898" height="554" key="GridCell.Tab.0.bottom" timestamp="1619488027090">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state width="1900" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619152256715" />
+    <state width="1898" height="554" key="GridCell.Tab.0.bottom/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619488027090" />
+    <state width="1898" height="554" key="GridCell.Tab.0.center" timestamp="1619488027090">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state width="1900" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619152256715" />
+    <state width="1898" height="554" key="GridCell.Tab.0.center/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619488027090" />
+    <state width="1898" height="554" key="GridCell.Tab.0.left" timestamp="1619488027090">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state width="1900" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619152256715" />
+    <state width="1898" height="554" key="GridCell.Tab.0.left/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619488027090" />
+    <state width="1898" height="554" key="GridCell.Tab.0.right" timestamp="1619488027090">
+      <screen x="0" y="0" width="3840" height="2080" />
+    </state>
+    <state width="1900" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619152256715" />
+    <state width="1898" height="554" key="GridCell.Tab.0.right/0.0.3840.2080/7680.1080.3840.2080@0.0.3840.2080" timestamp="1619488027090" />
+    <state x="462" y="165" key="SettingsEditor" timestamp="1619151237335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="462" y="165" key="SettingsEditor/0.0.1920.1040/3840.540.1920.1040@0.0.1920.1040" timestamp="1619151237335" />
+  </component>
+</project>
