@@ -58,9 +58,11 @@
     });
     document.body.appendChild(app.view);
 
-    app.loader.add('spritesheet.png','spritesheet.json').load(onAssetsLoaded);
+    //app.stop();
+    app.loader.add('spritesheet','..img/spritesheet.json').load(onAssetsLoaded);
     //app.stage.addChild(container);
 
+    //*
     function onAssetsLoaded(loader, resources) {
       // create an array to store the textures
       const textures = [];
@@ -71,7 +73,8 @@
         const framekey = `wizzard_m_idle_anim_f${i}..png`;
         //const framekey = `0123456789 ${i}.ase`;
         const texture = PIXI.Texture.from(framekey);
-        const time = resources.spritesheet.data.frames[framekey].duration;
+        //const time = resources.spritesheet.data.frames[framekey].duration;
+        const time=300;
         textures.push({ texture, time });
       }
       const scaling = 4;
@@ -97,10 +100,11 @@
 
       // start animating
       app.start();
-    }
+    }//*/
     /*
     let bol=false;
     const container = new PIXI.Container();
+    app.stage.addChild(container);
     // Create a new texture
     const texture = PIXI.Texture.from("../img/frames/wizzard_m_idle_anim_f0.png");
     const texture2 = PIXI.Texture.from("../img/frames/wizzard_m_idle_anim_f1.png");
