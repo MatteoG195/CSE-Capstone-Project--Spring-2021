@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>The Game</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
 </head>
 <body>
   <script type="text/javascript">
+/*
     //basic test to see if webgl or canvas is being used
     let type = "WebGL"
     if(!PIXI.utils.isWebGLSupported()){
@@ -37,7 +38,7 @@
     //loads the image into a sprite object,
     //which allows you to add it to the stage later.
     function setup() {
-      let sprite = new PIXI.Sprite(
+      let sprite1 = new PIXI.Sprite(
         PIXI.Loader.shared.resources["../img/frames/wizzard_m_idle_anim_f0.png"].texture
       );
 
@@ -45,12 +46,98 @@
       //the stage is where everything shows up,
       //all sprites will show up here and be
       // added to the stage
-      app.stage.addChild(sprite);
+      app.stage.addChild(sprite1);
     }
 
 
 
     document.body.appendChild(app.view);
+*/
+    const app = new PIXI.Application({
+      width: 800, height: 600, backgroundColor: 0x1099bb, resolution: window.devicePixelRatio || 1,
+    });
+    document.body.appendChild(app.view);
+
+    app.loader.add('spritesheet.png','spritesheet.json').load(onAssetsLoaded);
+    //app.stage.addChild(container);
+
+    function onAssetsLoaded(loader, resources) {
+      // create an array to store the textures
+      const textures = [];
+      let i;
+
+      for (i = 0; i < 4; i++) {
+        //wizzard_m_idle_anim_f0.png
+        const framekey = `wizzard_m_idle_anim_f${i}..png`;
+        //const framekey = `0123456789 ${i}.ase`;
+        const texture = PIXI.Texture.from(framekey);
+        const time = resources.spritesheet.data.frames[framekey].duration;
+        textures.push({ texture, time });
+      }
+      const scaling = 4;
+
+      // create a slow AnimatedSprite
+      const slow = new PIXI.AnimatedSprite(textures);
+      slow.anchor.set(0.5);
+      slow.scale.set(scaling);
+      slow.animationSpeed = 0.5;
+      slow.x = (app.screen.width - slow.width) / 2;
+      slow.y = app.screen.height / 2;
+      slow.play();
+      app.stage.addChild(slow);
+
+      // create a fast AnimatedSprite
+      const fast = new PIXI.AnimatedSprite(textures);
+      fast.anchor.set(0.5);
+      fast.scale.set(scaling);
+      fast.x = (app.screen.width + fast.width) / 2;
+      fast.y = app.screen.height / 2;
+      fast.play();
+      app.stage.addChild(fast);
+
+      // start animating
+      app.start();
+    }
+    /*
+    let bol=false;
+    const container = new PIXI.Container();
+    // Create a new texture
+    const texture = PIXI.Texture.from("../img/frames/wizzard_m_idle_anim_f0.png");
+    const texture2 = PIXI.Texture.from("../img/frames/wizzard_m_idle_anim_f1.png");
+    const texture3 = PIXI.Texture.from("../img/frames/wizzard_m_idle_anim_f2.png");
+
+    const bunny = new PIXI.Sprite(texture);
+    bunny.anchor.set(0.5);
+    //container.addChild(bunny);
+
+    // Move container to the center
+    bunny.x = app.screen.width / 2;
+    bunny.y = app.screen.height / 2;
+
+    // Center bunny sprite in local container coordinates
+    //container.pivot.x = container.width / 2;
+    //container.pivot.y = container.height / 2;
+
+    bunny.interactive = true;
+    bunny.buttonMode = true;
+
+    app.stage.addChild(bunny);
+    bunny.on('pointertap', () => {
+      bol = !bol;
+      if (bol) {
+        bunny.texture = texture2;
+      } else {
+        bunny.texture = texture;
+      }
+    });
+    */
+    // Listen for animate update
+    //app.ticker.add((delta) => {
+      // rotate the container!
+      // use delta to create frame-independent transform
+      //container.rotation -= 0.01 * delta;
+    //});
+
 
   </script>
 </body>
