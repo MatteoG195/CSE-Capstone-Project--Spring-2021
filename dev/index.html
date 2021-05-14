@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="js/pixi.min.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    function keyboard(value) {
+      let key = {};
+      key.value = value;
+      key.isDown = false;
+      key.isUp = true;
+      key.press = undefined;
+      key.release = undefined;
+      //The `downHandler`
+      key.downHandler = event => {
+        if (event.key === key.value) {
+          if (key.isUp && key.press) key.press();
+          key.isDown = true;
+          key.isUp = false;
+          event.preventDefault();
+        }
+      };
+
+      //The `upHandler`
+      key.upHandler = event => {
+        if (event.key === key.value) {
+          if (key.isDown && key.release) key.release();
+          key.isDown = false;
+          key.isUp = true;
+          event.preventDefault();
+        }
+      };
+
+      //Attach event listeners
+      const downListener = key.downHandler.bind(key);
+      const upListener = key.upHandler.bind(key);
+
+      window.addEventListener(
+        "keydown", downListener, false
+      );
+      window.addEventListener(
+        "keyup", upListener, false
+      );
+
+      // Detach event listeners
+      key.unsubscribe = () => {
+        window.removeEventListener("keydown", downListener);
+        window.removeEventListener("keyup", upListener);
+      };
+
+      return key;
+    }
+  </script>
+  <script type="text/javascript">
+    let type = `WebGL`;
+    if (!PIXI.utils.isWebGLSupported) {
+      type = `canvas`;
+    }
+
+    PIXI.utils.sayHello(type);
+
+    //app is where all the magic happens,
+    //pixi uses the app object to store the whole graphics scene
+    let app = new PIXI.Application({
+      width: 512,
+      height: 512,
+      antialias: true,
+      transparent: false,
+      resolution: 1.5
+    });
+    app.renderer.backgroundColor = 0x82B681;
+
+    //loads the image into a sprite object,
+    //which allows you to add it to the stage later.
+    let wiz;
+
+    //I need to figure out what exactly this does, and why we
+    // need to call load(setup) in order to make it work.
+    //will check documentation soon.
+    PIXI.loader
+      .add(`img/frames/wizzard_m_idle_anim_f0.png`)
+      .load(setup);
+
+    let state;
+
+    function setup() {
+      wiz = new PIXI.Sprite(
+        PIXI.loader.resources[`img/frames/wizzard_m_idle_anim_f0.png`].texture
+      );
+
+      wiz.x = 15;
+      wiz.y = 15;
+      wiz.vx = 0;
+      wiz.vy = 0;
+
+      //the stage is where everything shows up,
+      //all sprites will show up here and be
+      // added to the stage
+      app.stage.addChild(wiz);
+
+      let left = keyboard("ArrowLeft"),
+        up = keyboard("ArrowUp"),
+        right = keyboard("ArrowRight"),
+        down = keyboard("ArrowDown");
+
+      //Left arrow key `press` method
+      left.press = () => {
+        //Change the cat's velocity when the key is pressed
+        wiz.vx = -5;
+        //wiz.vy = 0;
+      };
+
+      //Left arrow key `release` method
+      left.release = () => {
+        //If the left arrow has been released, and the right arrow isn't down,
+        //and the cat isn't moving vertically:
+        //Stop the cat
+        //if (!right.isDown && wiz.vy === 0) {
+          wiz.vx = 0;
+        //}
+      };
+
+      //Up
+      up.press = () => {
+        wiz.vy = -5;
+        //wiz.vx = 0;
+      };
+      up.release = () => {
+        //if (!down.isDown && wiz.vx === 0) {
+          wiz.vy = 0;
+        //}
+      };
+
+      //Right
+      right.press = () => {
+        wiz.vx = 5;
+        //wiz.vy = 0;
+      };
+      right.release = () => {
+        //if (!left.isDown && wiz.vy === 0) {
+          wiz.vx = 0;
+        //}
+      };
+
+      //Down
+      down.press = () => {
+        wiz.vy = 5;
+        //wiz.vx = 0;
+      };
+      down.release = () => {
+        //if (!up.isDown && wiz.vx === 0) {
+          wiz.vy = 0;
+        //}
+      };
+
+      state = play;
+
+
+      app.ticker.add(delta => gameLoop(delta));
+    }
+
+    function gameLoop(delta) {
+        state(delta);
+    }
+
+    function play() {
+      wiz.x += wiz.vx;
+      if (wiz.x <= 0)
+      {
+        wiz.x = app.renderer.width/app.renderer.resolution - 5;
+      } else if (wiz.x >= app.renderer.width/app.renderer.resolution) {
+        wiz.x = 5;
+      }
+
+      wiz.y += wiz.vy;
+      if (wiz.y <= 0)
+      {
+        wiz.y = app.renderer.height/app.renderer.resolution - 5;
+      } else if (wiz.y >= app.renderer.height/app.renderer.resolution) {
+        wiz.y = 5;
+      }
+    }
+
+    document.body.appendChild(app.view);
+
+  </script>
+</body>
+</html>

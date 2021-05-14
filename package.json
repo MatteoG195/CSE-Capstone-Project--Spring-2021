@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/MatteoG195/CSE-Capstone-Project--Spring-2021#readme",
   "dependencies": {
-    "pixi.js": "^6.0.2",
     "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.14.2",
     "babel": "^6.23.0",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.14",
     "css-minify": "^1.1.0",
+    "eslintrc": "^1.0.6",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -30,6 +34,9 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "stylelint": "^13.12.0"
+    "pixi": "^0.3.1",
+    "pixi.js": "^6.0.2",
+    "stylelint": "^13.12.0",
+    "three": "^0.127.0"
   }
 }

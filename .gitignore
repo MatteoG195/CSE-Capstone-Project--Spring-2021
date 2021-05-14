@@ -1,2 +1,7 @@
 node_modules
+<<<<<<< HEAD
 prod
+.idea
+=======
+prod
+>>>>>>> 55a32d3b8cee3c07890036fd36d482197aa3d56e
