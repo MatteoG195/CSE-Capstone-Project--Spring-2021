@@ -16,21 +16,11 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a440a6ff-2c01-4f53-b2a4-5f034a1e1aa4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dev/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +68,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js" />
-      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\html" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021" />
       <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev" />
       <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\prod\img" />
       <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js\pixi.js" />
       <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\js" />
+      <recent name="C:\Users\matte\OneDrive\Documents\GitHub\CSE-Capstone-Project--Spring-2021\dev\html" />
     </key>
   </component>
   <component name="RunManager" selected="Gulp.js.validateHTML">
