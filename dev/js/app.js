@@ -1,5 +1,45 @@
-import * as PIXI from 'pixi';
-window.onLoad = () => {
-	let app = new PIXI.Application({width:256,height:256});
+//basic test to see if webgl or canvas is being used
+import * as PIXI from './pixi.min.js';
 
-};
+
+let type = `WebGL`;
+if (!PIXI.utils.isWebGLSupported) {
+	type = `canvas`;
+}
+
+PIXI.utils.sayHello(type);
+
+//app is where all the magic happens,
+//pixi uses the app object to store the whole graphics scene
+let app = new PIXI.Application({
+	width: 512,
+	height: 512,
+	antialias: true,
+	transparent: false,
+	resolution: 1.5
+});
+app.renderer.backgroundColor = 0x82B681;
+
+
+//I need to figure out what exactly this does, and why we
+// need to call load(setup) in order to make it work.
+//will check documentation soon.
+PIXI.Loader.shared
+	.add(`img/frames/wizzard_m_idle_anim_f0.png`)
+	.load(setup);
+
+//loads the image into a sprite object,
+//which allows you to add it to the stage later.
+function setup() {
+	let sprite = new PIXI.Sprite(
+		PIXI.Loader.shared.resources[`img/frames/wizzard_m_idle_anim_f0.png`].texture
+	);
+
+
+	//the stage is where everything shows up,
+	//all sprites will show up here and be
+	// added to the stage
+	app.stage.addChild(sprite);
+}
+
+document.body.appendChild(app.view);

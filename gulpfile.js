@@ -22,13 +22,13 @@ const reload = browserSync.reload;
 
 let validateHTML = () => {
 	return src([
-		`dev/html/*.html`,
-		`dev/html/**/*.html`])
+		`dev/*.html`,
+		`dev/**/*.html`])
 		.pipe(htmlValidator());
 };
 
 let compressHTML = () => {
-	return src([`dev/html/*.html`,`html/**/*.html`])
+	return src([`dev/*.html`,`dev/**/*.html`])
 		.pipe(htmlCompressor({collapseWhitespace: true}))
 		.pipe(dest(`prod`));
 };
@@ -104,7 +104,7 @@ let dev = () => {
 		series(lintCSS)
 	).on(`change`, reload);
 
-	watch(`html/**/*.html`,
+	watch(`**/*.html`,
 		series(validateHTML)
 	).on(`change`, reload);
 };
